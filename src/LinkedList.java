@@ -26,6 +26,10 @@ public class LinkedList {
     }
 
     public void addTail(int valor){
-    
+
+    }
+
+    public void addByPosition(int index, int value){
+
     }
 }
