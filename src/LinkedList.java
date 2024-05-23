@@ -58,9 +58,14 @@ public class LinkedList {
                 current = current.next;
             }
 
-            System.out.println("Terminé");
-        }
+            if(current.next == null){
+                addTail(value);
+            }else{
+                newNode.next = current.next;
+                current.next = newNode;
+            }
 
+        }
     }
 
     public void deleteByPosition(int index, int value) {
