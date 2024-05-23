@@ -50,7 +50,17 @@ public class LinkedList {
         } else {
             Node newNode = new Node(value);
             Node current = head;
+
+            for(int i = 0; i < index - 1; i++){
+                if(current == null){
+                    throw new IndexOutOfBoundsException("El indice està fuera de tus alcances");
+                }
+                current = current.next;
+            }
+
+            System.out.println("Terminé");
         }
+
     }
 
     public void deleteByPosition(int index, int value) {
