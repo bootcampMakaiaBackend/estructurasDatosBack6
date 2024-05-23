@@ -13,7 +13,7 @@ public class LinkedList {
     protected Node tail = null;
     //[valor] next -> [valor]
 
-    //9
+
     //[5] ->  [8] -> [9] ->null
     //head          tail
     public void addHead(int value){
@@ -25,22 +25,31 @@ public class LinkedList {
             tail=newNode;
         }
     }
-    //
-    public void addTail(int valor) {
-        if(tail == null) {
-
+    //9
+    //[9]
+    //[10] -> [19] -> [0] ->[100]
+    //head            tail
+    public void addTail(int value) {
+        Node newNode = new Node(value); //[9] .next -> null
+        if(tail == null){
+            head = newNode;
+            tail = newNode;
+            return;
         }
+        tail.next = newNode;
+        tail = newNode;
     }
 
     // index - > 2 el valor 6
     //[5] ->  [8] ->  [6] ->  [9]  -> [78] -> [123] -> [70] -> [800]
     public void addByPosition(int index, int value) {
-        //index = 0 y el valor 5
         if(index == 0) {
             addHead(value);
-        }
-        if(index < 0){
+        } else if (index < 0) {
             throw new IndexOutOfBoundsException();
+        } else {
+            Node newNode = new Node(value);
+            Node current = head;
         }
     }
 
